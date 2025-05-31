@@ -1,7 +1,9 @@
-import React from "react";
-
+import Crew from "./components/Crew";
+import Destination from "./components/destination";
+import Homepage from "./components/Homepage";
+import Technology from "./components/Technology";
 const App = () => {
-  return <div>App</div>;
+  return <Technology />;
 };
 
 export default App;
