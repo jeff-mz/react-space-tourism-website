@@ -1,5 +1,4 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { useState } from "react";
 import Header from "./Header";
 
 // Import crew images
@@ -8,11 +7,9 @@ import markImage from "../assets/images/crew/image-mark-shuttleworth.webp";
 import victorImage from "../assets/images/crew/image-victor-glover.webp";
 import anoushehImage from "../assets/images/crew/image-anousheh-ansari.webp";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
 const Crew = () => {
+  const [activeMember, setActiveMember] = useState(0);
+
   const crewMembers = [
     {
       id: 1,
@@ -47,74 +44,57 @@ const Crew = () => {
   return (
     <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('../../src/assets/images/crew/background-crew-mobile.jpg')] md:bg-[url('../../src/assets/images/crew/background-crew-tablet.jpg')] lg:bg-[url('../../src/assets/images/crew/background-crew-desktop.jpg')]">
       <Header />
-
       <main className="container mx-auto px-6 py-8 md:py-12 lg:py-16 lg:px-40">
         <h1 className="text-white font-sans-condensed uppercase tracking-widest text-center md:text-left mb-8 md:mb-12 lg:mb-16 text-lg md:text-xl">
           <span className="text-white/50 font-bold mr-4">02</span>
           Meet your crew
         </h1>
 
-        <Swiper
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-            el: ".crew-pagination",
-            bulletClass: "crew-bullet",
-            bulletActiveClass: "crew-bullet-active",
-          }}
-          modules={[Pagination]}
-          className="crew-swiper"
-        >
-          {crewMembers.map((member) => (
-            <SwiperSlide key={member.id}>
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                <div className="text-center md:text-left order-2 md:order-1">
-                  <h2 className="text-white/50 font-serif text-2xl md:text-3xl lg:text-4xl uppercase mb-2">
-                    {member.role}
-                  </h2>
-                  <h3 className="text-white font-serif text-3xl md:text-4xl lg:text-5xl uppercase mb-4">
-                    {member.name}
-                  </h3>
-                  <p className="text-indigo-200 font-sans text-base md:text-lg leading-6 md:leading-8 max-w-md mx-auto md:mx-0">
-                    {member.bio}
-                  </p>
-                </div>
+        <div className="flex flex-col-reverse lg:flex-row-reverse items-center gap-8 md:gap-12">
+          {/* Crew Images */}
+          <div className="w-full lg:w-1/2 relative">
+            <div className="relative flex justify-center pb-8 lg:pb-0">
+              <img
+                src={crewMembers[activeMember].image}
+                alt={`${crewMembers[activeMember].name}, ${crewMembers[activeMember].role}`}
+                className="w-44 h-44 md:w-72 md:h-72 lg:w-full lg:h-auto object-contain transition-opacity duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0B0D17] to-transparent"></div>
+            </div>
+          </div>
 
-                {/* Image */}
-                <div className="flex justify-center order-1 md:order-2">
-                  <img
-                    src={member.image}
-                    alt={`${member.name}, ${member.role}`}
-                    className="w-44 h-44 md:w-72 md:h-72 lg:w-96 lg:h-96 object-contain"
-                  />
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
+          {/* Crew Content */}
+          <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
+            <div className="text-center lg:text-left">
+              <h2 className="text-white/50 font-serif text-2xl md:text-3xl lg:text-4xl uppercase mb-2">
+                {crewMembers[activeMember].role}
+              </h2>
+              <h3 className="text-white font-serif text-3xl md:text-4xl lg:text-5xl uppercase mb-4">
+                {crewMembers[activeMember].name}
+              </h3>
+              <p className="text-indigo-200 font-sans text-base md:text-lg leading-6 md:leading-8 max-w-md mx-auto lg:mx-0">
+                {crewMembers[activeMember].bio}
+              </p>
+            </div>
 
-          {/* Custom Pagination Container */}
-          <div className="crew-pagination flex justify-center gap-3 mt-8" />
-        </Swiper>
+            {/* Indicators */}
+            <div className="flex gap-4 my-8 md:mt-12">
+              {crewMembers.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveMember(index)}
+                  className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all ${
+                    activeMember === index
+                      ? "bg-white"
+                      : "bg-white/20 hover:bg-white/50"
+                  }`}
+                  aria-label={`View ${crewMembers[index].name}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </main>
-
-      {/* Custom Styles */}
-      <style jsx global>{`
-        .crew-bullet {
-          width: 10px;
-          height: 10px;
-          background: rgba(255, 255, 255, 0.3);
-          border-radius: 50%;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-        .crew-bullet-active {
-          background: white;
-          transform: scale(1.2);
-        }
-        .crew-swiper {
-          padding-bottom: 40px;
-        }
-      `}</style>
     </div>
   );
 };

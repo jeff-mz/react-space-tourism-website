@@ -1,4 +1,5 @@
 import Header from "./Header";
+import { NavLink } from "react-router";
 
 const Homepage = () => {
   return (
@@ -23,9 +24,12 @@ const Homepage = () => {
           </div>
 
           <div className="flex justify-center lg:justify-end relative group">
-            <button className="w-[150px] h-[150px] md:w-[242px] md:h-[242px] bg-white rounded-full flex items-center justify-center text-xl md:text-3xl font-serif uppercase tracking-widest text-gray-900 hover:shadow-[0_0_0_40px_rgba(255,255,255,0.1)] transition-all duration-300 group-hover:shadow-[0_0_0_40px_rgba(255,255,255,0.1)]">
+            <NavLink
+              to="/destination"
+              className="w-[150px] h-[150px] md:w-[242px] md:h-[242px] bg-white rounded-full flex items-center justify-center text-xl md:text-3xl font-serif uppercase tracking-widest text-gray-900 hover:shadow-[0_0_0_40px_rgba(255,255,255,0.1)] transition-all duration-300 group-hover:shadow-[0_0_0_40px_rgba(255,255,255,0.1)]"
+            >
               Explore
-            </button>
+            </NavLink>
           </div>
         </div>
       </main>

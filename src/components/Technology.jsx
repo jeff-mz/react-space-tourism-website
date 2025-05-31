@@ -3,7 +3,7 @@ import { Swiper } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import Header from "./Header";
 
-// Technology images (vehicle, capsule, spaceport)
+// images
 import launchVehiclePortrait from "../assets/images/technology/image-launch-vehicle-portrait.jpg";
 import launchVehicleLandscape from "../assets/images/technology/image-launch-vehicle-landscape.jpg";
 import spaceportPortrait from "../assets/images/technology/image-spaceport-portrait.jpg";
@@ -11,7 +11,7 @@ import spaceportLandscape from "../assets/images/technology/image-spaceport-land
 import spaceCapsulePortrait from "../assets/images/technology/image-space-capsule-portrait.jpg";
 import spaceCapsuleLandscape from "../assets/images/technology/image-space-capsule-landscape.jpg";
 
-// Import Swiper styles
+// swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -55,8 +55,8 @@ const Technology = () => {
           Space launch 101
         </h1>
 
-        <div className="lg:flex lg:flex-row-reverse lg:items-center lg:gap-12 lg:justify-end">
-          {/* Technology Image - Swiper */}
+        <div className="lg:flex lg:flex-row-reverse lg:items-start lg:gap-12 lg:justify-end">
+          {/* Technology image  */}
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
             <Swiper
               spaceBetween={30}
@@ -81,7 +81,7 @@ const Technology = () => {
           </div>
 
           {/* Technology Content */}
-          <div className="lg:w-1/2 flex flex-col lg:flex-row lg:gap-20">
+          <div className="lg:w-1/2 flex flex-col lg:flex-row lg:gap-20 px-2 sm:px--0">
             <div className="flex lg:flex-col justify-center gap-4 md:gap-6 mb-6 md:mb-8 lg:mb-12">
               {technologies.map((tech, index) => (
                 <button
