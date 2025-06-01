@@ -1,8 +1,37 @@
-# React + Vite
+# 🚀 Space Tourism Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my solution to the
+[Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
+A responsive multi-page space tourism website featuring interactive crew and
+technology sections.
 
-Currently, two official plugins are available:
+### The Challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users should be able to:
+
+- View optimal layouts for all pages across devices
+- See hover states for interactive elements
+- Navigate between pages and content tabs seamlessly
+
+## 📷 Screenshot
+
+![App Preview](./src/assets/images/preview.jpg)
+
+## 🔗 Links
+
+- [Vercel Deployment](https://react-space-tourism-website-nu.vercel.app/)
+- [Github Repository ](https://github.com/jeff-mz/react-space-tourism-website)
+
+## ✨ Features
+
+- Responsive Design
+- Mobile-first workflow with 3 breakpoints (mobile/tablet/desktop)
+- Dynamic background images for each screen size
+- Fluid typography and spacing
+
+## 🛠 Tech Stack
+
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Swiper.js](https://swiperjs.com/)
+- [React Router](https://reactrouter.com/)
