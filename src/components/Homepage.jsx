@@ -9,8 +9,8 @@ const Homepage = () => {
     >
       <Header />
 
-      <main className="container mx-auto px-6 py-12 md:py-16 lg:py-24 lg:px-0 lg:pl-40">
-        <div className="flex flex-col sm:flex-row items-center sm:justify-around gap-20">
+      <main className="w-full mx-auto px-6 py-12 md:py-16 lg:pt-[20rem] lg:px-44">
+        <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-10">
           <div className="text-center lg:text-left max-w-md mx-auto lg:mx-0">
             <h1 className="text-indigo-100 font-sans-condensed uppercase tracking-widest text-lg md:text-xl mb-4">
               So, you want to travel to
