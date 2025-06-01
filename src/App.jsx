@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router";
-import Crew from "./components/Crew";
-import Destination from "./components/destination";
-import Homepage from "./components/Homepage";
-import Technology from "./components/Technology";
+import Crew from "./components/Crew.jsx";
+import Destination from "./components/Destination.jsx";
+import Homepage from "./components/Homepage.jsx";
+import Technology from "./components/Technology.jsx";
 const App = () => {
   return (
     <Routes>
