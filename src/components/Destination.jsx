@@ -46,7 +46,7 @@ const Destination = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('../../src/assets/images/destination/background-destination-mobile.jpg')] md:bg-[url('../../src/assets/images/destination/background-destination-tablet.jpg')] lg:bg-[url('../../src/assets/images/destination/background-destination-desktop.jpg')]">
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('https://i.postimg.cc/jdbjCqvL/background-destination-mobile.jpg')] md:bg-[url('https://i.postimg.cc/RVLZtrbG/background-destination-tablet.jpg')] lg:bg-[url('https://i.postimg.cc/G3Y2cTFW/background-destination-desktop.jpg')]">
       <Header />
 
       <main className="container mx-auto px-6 py-8 md:py-12 lg:py-16 lg:px-40">

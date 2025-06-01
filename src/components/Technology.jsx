@@ -46,7 +46,7 @@ const Technology = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('../../src/assets/images/technology/background-technology-mobile.jpg')] md:bg-[url('../../src/assets/images/technology/background-technology-tablet.jpg')] lg:bg-[url('../../src/assets/images/technology/background-technology-desktop.jpg')]">
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('https://i.postimg.cc/bNsmD8Jf/background-technology-mobile.jpg')] md:bg-[url('https://i.postimg.cc/65gYCS22/background-technology-tablet.jpg')] lg:bg-[url('https://i.postimg.cc/sfnng13J/background-technology-desktop.jpg')]">
       <Header />
 
       <main className="w-full lg:ps-24 mx-auto py-8 md:py-12 lg:py-16">

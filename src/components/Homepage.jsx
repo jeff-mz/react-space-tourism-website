@@ -3,7 +3,10 @@ import { Link } from "react-router";
 
 const Homepage = () => {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('../../src/assets/images/home/background-home-mobile.jpg')] md:bg-[url('../../src/assets/images/home/background-home-tablet.jpg')] lg:bg-[url('../../src/assets/images/home/background-home-desktop.jpg')]">
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('https://i.postimg.cc/T3SMLCGC/background-home-mobile.jpg
+')] md:bg-[url('https://i.postimg.cc/XvCMwdY3/background-home-tablet.jpg')] lg:bg-[url('https://i.postimg.cc/bwdfwKXZ/background-home-desktop.jpg')]"
+    >
       <Header />
 
       <main className="container mx-auto px-6 py-12 md:py-16 lg:py-24 lg:px-0 lg:pl-40">

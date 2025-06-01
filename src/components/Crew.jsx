@@ -42,7 +42,7 @@ const Crew = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('../../src/assets/images/crew/background-crew-mobile.jpg')] md:bg-[url('../../src/assets/images/crew/background-crew-tablet.jpg')] lg:bg-[url('../../src/assets/images/crew/background-crew-desktop.jpg')]">
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('https://i.postimg.cc/DwQy19jB/background-crew-desktop.jpg')] md:bg-[url('https://i.postimg.cc/43BfSzTc/background-crew-tablet.jpg')] lg:bg-[url('https://i.postimg.cc/DwQy19jB/background-crew-desktop.jpg')]">
       <Header />
       <main className="container mx-auto px-6 py-8 md:py-12 lg:py-16 lg:px-40">
         <h1 className="text-white font-sans-condensed uppercase tracking-widest text-center md:text-left mb-8 md:mb-12 lg:mb-16 text-lg md:text-xl">
