@@ -19,7 +19,7 @@ Users should be able to:
 
 ## 🔗 Links
 
-- [Vercel Deployment](https://react-space-tourism-website-nu.vercel.app/)
+- [Vercel Deployment](https://react-space-tourism-website-six.vercel.app/)
 - [Github Repository ](https://github.com/jeff-mz/react-space-tourism-website)
 
 ## ✨ Features
